@@ -1,8 +1,8 @@
 name: Deploy static content to GitHub Pages
 
 permissions:
-  contents: read
   id-token: write
+  pages: write
 
 on:
   push:
