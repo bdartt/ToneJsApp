@@ -1,0 +1,347 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="./css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="./favicon.ico" sizes="any">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icon.png">
+
+  <link rel="manifest" href="./site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <h1><img width="70" src="./img/tones-for-spirit.jpg"/> Tone Generator Tool</h1>
+
+  <hr/>
+  <legend>Select a Root Frequency Below</legend><br/>
+
+  <table style="width:100%">
+    <thead>
+    <tr style="text-align: center">
+      <td colspan="5">Earth Tones from <a href="https://harmonicsofnature.com/">Harmonics of Nature</a></td>
+      <td colspan="2">Additional Tones</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>🌎 &nbsp;&nbsp;Physical / Gravity / Spin</td>
+      <td>🧲 &nbsp;&nbsp;Electro-Magnetic</td>
+      <td>🌙 &nbsp;&nbsp;Emotional / Astral</td>
+      <td>☸️ &nbsp;&nbsp;11th Harmonic Solfeggio</td>
+      <td>⚡️ &nbsp;&nbsp;Schumann Resonance</td>
+      <td>♫️ &nbsp;&nbsp;Custom</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>🏔️Nature</td>
+      <td>&nbsp;</td>
+      <td>
+        <input type="radio" name="rootFrequencyOption" id="hon-em-nature" value="hon-em-nature"/>
+        <label for="hon-em-nature">12.15 Hz</label>
+      </td>
+      <td>
+        <input type="radio" name="rootFrequencyOption" id="hon-ast-nature" value="hon-ast-nature"/>
+        <label for="hon-ast-nature">15.1875 Hz</label>
+      </td>
+      <td>&nbsp;</td>
+      <td rowspan="10" style="width:20%;vertical-align: top">
+        <input type="radio" name="rootFrequencyOption" id="schumann" value="schumann"/>
+        <label for="schumann">Schumann Special 7.83 Hz</label>
+        <div style="padding-left: 50px">
+          <li>Schumann Harmonics behave differently than normal acoustic harmonics.</li>
+          <li>Harmonics are based on electromagnetic waves in a sphere (the ionosphere).</li>
+          <li>This tool approximates the real harmonics by using a root of 6.5 Hz, then it adds one and one third Hz to each harmonic value. This method is only accurate for the first few harmonics though.</li>
+          <li>This often results in binaural oscillations at multiples of 1.33 Hz (precisely one and one third), depending on the harmonics chosen to play in each ear.</li>
+        </div>
+      </td>
+      <td rowspan="10" style="width:15%;vertical-align: top">
+        <input type="radio" name="rootFrequencyOption" id="custom" value="custom"/>
+        <label for="custom">Custom Root Frequency</label>
+        <input id="customInput" type="text" value="6.75"/>
+      </td>
+    </tr>
+    <tr>
+      <td>🧠 Mind</td>
+      <td>&nbsp;</td>
+      <td>
+        <input type="radio" name="rootFrequencyOption" id="hon-em-mind" value="hon-em-mind"/>
+        <label for="hon-em-mind">8.1 Hz</label>
+      </td>
+      <td>
+        <input type="radio" name="rootFrequencyOption" id="hon-ast-mind" value="hon-ast-mind"/>
+        <label for="hon-ast-mind">10.125 Hz</label>
+      </td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>❤️ Heart</td>
+      <td>
+        <input type="radio" name="rootFrequencyOption" id="hon-p-heart" value="hon-p-heart"/>
+        <label for="hon-p-heart">17.28 Hz</label>
+      </td>
+      <td>
+        <input type="radio" name="rootFrequencyOption" id="hon-em-heart" value="hon-em-heart"/>
+        <label for="hon-em-heart">10.8 Hz</label>
+      </td>
+      <td>
+        <input type="radio" name="rootFrequencyOption" id="hon-ast-heart" value="hon-ast-heart"/>
+        <label for="hon-ast-heart">13.5 Hz</label>
+        <i>(A4 432)</i>
+      </td>
+      <td>
+        <input type="radio" name="rootFrequencyOption" id="hon-11th-heart" value="hon-11th-heart"/>
+        <label for="hon-11th-heart">14.85 Hz</label>
+        <i>(true 396)</i>
+      </td>
+    </tr>
+    <tr>
+      <td>🌀️ Spirit</td>
+      <td>
+        <input type="radio" name="rootFrequencyOption" id="hon-p-spirit" value="hon-p-spirit"/>
+        <label for="hon-p-spirit">11.52 Hz</label>
+      </td>
+      <td>
+        <input type="radio" name="rootFrequencyOption" id="hon-em-spirit" value="hon-em-spirit"/>
+        <label for="hon-em-spirit">7.2 Hz</label>
+      </td>
+      <td>
+        <input type="radio" name="rootFrequencyOption" id="hon-ast-spirit" value="hon-ast-spirit"/>
+        <label for="hon-ast-spirit">9 Hz</label>
+      </td>
+      <td>
+        <input type="radio" name="rootFrequencyOption" id="hon-11th-spirit" value="hon-11th-spirit"/>
+        <label for="hon-11th-spirit">9.9 Hz</label>
+        <i>(true 528)</i>
+      </td>
+    </tr>
+    <tr>
+      <td>🌿 Life</td>
+      <td>
+        <input type="radio" name="rootFrequencyOption" id="hon-p-life" value="hon-p-life"/>
+        <label for="hon-p-life">15.36 Hz</label>
+      </td>
+      <td>
+        <input type="radio" name="rootFrequencyOption" id="hon-em-life" value="hon-em-life"/>
+        <label for="hon-em-life">9.6 Hz</label>
+        <i>(5 Heleks)</i>
+      </td>
+      <td>
+        <input type="radio" name="rootFrequencyOption" id="hon-ast-life" value="hon-ast-life"/>
+        <label for="hon-ast-life">12 Hz</label>
+      </td>
+      <td>
+        <input type="radio" name="rootFrequencyOption" id="hon-11th-life" value="hon-11th-life"/>
+        <label for="hon-11th-life">13.2 Hz</label>
+      </td>
+    </tr>
+    <tr>
+      <td>💎 Structure</td>
+      <td>
+        <input type="radio" name="rootFrequencyOption" id="hon-p-structure" value="hon-p-structure"/>
+        <label for="hon-p-structure">10.24 Hz</label>
+      </td>
+      <td>
+        <input type="radio" name="rootFrequencyOption" id="hon-em-structure" value="hon-em-structure"/>
+        <label for="hon-em-structure">12.8 Hz</label>
+        <i>(0.1 Hz)</i>
+      </td>
+      <td>
+        <input type="radio" name="rootFrequencyOption" id="hon-ast-structure" value="hon-ast-structure"/>
+        <label for="hon-ast-structure">8 Hz</label>
+        <i>(Quartz)</i>
+      </td>
+      <td>
+        <input type="radio" name="rootFrequencyOption" id="hon-11th-structure" value="hon-11th-structure"/>
+        <label for="hon-11th-structure">8.8 Hz</label>
+      </td>
+    </tr>
+    <tr>
+      <td>📜 Ancestors</td>
+      <td>
+        <input type="radio" name="rootFrequencyOption" id="hon-p-ancestors" value="hon-p-ancestors"/>
+        <label for="hon-p-ancestors">13.65333 Hz</label>
+      </td>
+      <td>
+        <input type="radio" name="rootFrequencyOption" id="hon-em-ancestors" value="hon-em-ancestors"/>
+        <label for="hon-em-ancestors">8.5333 Hz</label>
+      </td>
+      <td>&nbsp;</td>
+      <td>
+        <input type="radio" name="rootFrequencyOption" id="hon-11th-ancestors" value="hon-11th-ancestors"/>
+        <label for="hon-11th-ancestors">11.733 Hz</label>
+      </td>
+    </tr>
+    <tr>
+      <td>😰 Trauma Release</td>
+      <td>
+        <input type="radio" name="rootFrequencyOption" id="hon-p-trauma" value="hon-p-trauma"/>
+        <label for="hon-p-trauma">9.10222 Hz</label>
+      </td>
+      <td>
+        <input type="radio" name="rootFrequencyOption" id="hon-em-trauma" value="hon-em-trauma"/>
+        <label for="hon-em-trauma">11.3777 Hz</label>
+        <i>(The Sun)</i>
+      </td>
+      <td>&nbsp;</td>
+      <td>
+        <input type="radio" name="rootFrequencyOption" id="hon-11th-trauma" value="hon-11th-trauma"/>
+        <label for="hon-11th-trauma">7.81875 Hz</label>
+        <i>(true 417)</i>
+      </td>
+    </tr>
+    <tr>
+      <td>🧱 Fundamental</td>
+      <td>
+        <input type="radio" name="rootFrequencyOption" id="hon-p-fundamental" value="hon-p-fundamental" checked="checked"/>
+        <label for="hon-p-fundamental">12.136296296 Hz</label>
+        <i>(Earth)</i>
+      </td>
+      <td>
+        <input type="radio" name="rootFrequencyOption" id="hon-em-fundamental" value="hon-em-fundamental"/>
+        <label for="hon-em-fundamental">7.585185185 Hz</label>
+      </td>
+      <td>&nbsp;</td>
+      <td>
+        <input type="radio" name="rootFrequencyOption" id="hon-11th-fundamental" value="hon-11th-fundamental"/>
+        <label for="hon-11th-fundamental">10.42962963 Hz</label>
+      </td>
+    </tr>
+    <tr>
+      <td>⚙️ Sub-Fundamental</td>
+      <td>&nbsp;</td>
+      <td>
+        <input type="radio" name="rootFrequencyOption" id="hon-em-sub" value="hon-em-sub"/>
+        <label for="hon-em-sub">5.05679012 Hz</label>
+      </td>
+      <td>&nbsp;</td>
+      <td>
+        <input type="radio" name="rootFrequencyOption" id="hon-11th-sub" value="hon-11th-sub"/>
+        <label for="hon-11th-sub">13.90617284 Hz</label>
+        <i>(true 741)</i>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <br/><hr/>
+
+  <legend>Player Guide and Settings</legend><br/>
+
+  <table style="width:100%;text-align: center">
+    <thead>
+    <tr>
+      <td style="width:25%">Harmonic / Frequency / Octaves</td>
+      <td style="width:25%">Meaning</td>
+      <td style="width:25%">♫ Note</td>
+      <td style="width:25%">🎨 Color</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>The harmonic of the root frequency, where the 1st harmonic is the selected root. <b>Use the selector above to choose a root frequency.</b><br/><br/>The frequency value in Hz for the harmonic (root frequency multiplied by harmonic number).<br/><br/>Eight total octaves of the harmonic frequency are also shown (each octave doubles the frequency from the last octave).</td>
+      <td>
+        When the harmonic frequency matches an octave of one of the special root options listed to the left from <a href="https://harmonicsofnature.com/">Harmonics of Nature</a>, it will be listed here using the icons (hover mouse over icon to see tooltip with the names for the icons).
+        <br/><br/>
+        <b><u>Sensitivity Settings</u></b><br/>
+        <label for="sensitivity">within</label>
+        <input type="text" id="sensitivity" value="0.5" style="width: 30px"/>%
+      </td>
+      <td>
+        The closest musical note for tuning based on the settings below, including cents below or above the true note, and also the interval name in the key of C (e.g. major 3rd, perfect 5th, etc).
+        <br/><br/>
+        <b><u>Analysis Settings</u></b><br/>
+        <div id="tunerSettings"></div>
+      </td>
+      <td>Color for an octave of the harmonic frequency within visible light spectrum (385 THz - 790 THz). This is a purely mathematical calculation that doubles the harmonic frequency until it's within the THz range for visible light, then it converts that frequency's wavelength in nanometers to RGB colors.</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <br/><hr/>
+
+  <legend>Player</legend><br/>
+
+  <table style="width:100%;text-align:center">
+    <tbody>
+    <tr>
+      <td style="width:80%;vertical-align: top;padding:0">
+        <div style="height:300px;max-height:300px;overflow-y:scroll">
+          <table style="width:100%;text-align:center">
+            <thead>
+            <tr>
+              <td style="width:5%">Harmonic</td>
+              <td style="width:5%">Octave</td>
+              <td style="width:15%">Frequency</td>
+              <td style="width:15%">Meaning</td>
+              <td style="width:15%" colspan="2">♫ Note + 🎨 Color</td>
+              <td style="width:20%">Panning Left/Right</td>
+              <td style="width:20%" colspan="2">Volume / Gain</td>
+            </tr>
+            </thead>
+            <tbody id="playerTableBody">
+            <tr>
+              <td colspan="9"><br/>No tones selected. Please add one or more from the table below.<br/><br/></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </td>
+      <td style="width:20%; vertical-align: top;border-width: 0">
+        <b><u>Master Volume</u></b><br/>
+        - <input type="range" min="0.0" max="1.0" step="0.01" value="1.0" onchange="Player.overallGain = this.value"/> +
+        <br/><br/>
+        <button id="toggleButton" style="font-size: large; font-weight:bold; padding:20px 80px">▶️ PLAY</button>
+        <br/><br/>
+        <b><u>Or download to a WAV file...</u></b><br/>
+        <label for="exportDuration">Duration in Seconds:</label>
+        <input type="number" id="exportDuration" value="2013"/>
+        <button id="exportButton">Download</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+
+  <br/><br/>
+
+  <table style="width:100%;text-align:center">
+    <thead>
+    <tr>
+      <td rowspan="2">Harmonic</td>
+      <td rowspan="2">Frequency</td>
+      <td rowspan="2">Meaning</td>
+      <td rowspan="2" colspan="2">♫ Note + 🎨 Color</td>
+      <td colspan="8">Octaves in Hz (only shows 2 decimal places for display)</td>
+    </tr>
+    <tr>
+      <td>1st</td>
+      <td>2nd</td>
+      <td>3rd</td>
+      <td>4th</td>
+      <td>5th</td>
+      <td>6th</td>
+      <td>7th</td>
+      <td>8th</td>
+    </tr>
+    </thead>
+    <tbody id="harmonicTableBody">
+    </tbody>
+  </table>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>
