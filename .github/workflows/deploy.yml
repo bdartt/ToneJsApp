@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: '24'
       - name: Install dependencies
-        run: npm install
+        run: npm ci
       - name: Build project
         run: npm run build # Runs your build script (e.g., 'react-scripts build')
       - name: Upload artifact
